@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RMt-7G-2Bi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ym2-0g-fW9">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -35,12 +35,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ym2-0g-fW9" secondAttribute="trailing" id="nhT-fK-0mt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wvr-0K-qOY"/>
                     <connections>
                         <outlet property="TheTable" destination="ym2-0g-fW9" id="PaL-yQ-VBR"/>
+                        <segue destination="GoW-ku-LxW" kind="show" identifier="moveSegue" id="rsx-P8-TpE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="-162.3688155922039"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bwX-fa-WHB">
@@ -79,7 +82,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgQ-vQ-vwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.79999999999995" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1940" y="-162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0ER-jN-12v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RMt-7G-2Bi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="owg-zL-pwo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CZB-wJ-yl5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8f-pa-0bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="-162"/>
         </scene>
     </scenes>
 </document>
